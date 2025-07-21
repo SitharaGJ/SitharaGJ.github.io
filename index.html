@@ -67,6 +67,30 @@
     .icon-float:nth-child(2) { animation-delay: 0.2s; }
     .icon-float:nth-child(3) { animation-delay: 0.4s; }
     .icon-float:nth-child(4) { animation-delay: 0.6s; }
+
+    /* Bubble animation */
+    .bubble {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      pointer-events: none;
+      animation: floatBubble 10s infinite ease-in-out;
+    }
+    @keyframes floatBubble {
+      0% { transform: translateY(100vh) scale(1); opacity: 0.1; }
+      50% { opacity: 0.3; }
+      100% { transform: translateY(-100vh) scale(1.2); opacity: 0.1; }
+    }
+    .bubble:nth-child(1) { width: 40px; height: 40px; left: 10%; animation-duration: 12s; animation-delay: 0s; }
+    .bubble:nth-child(2) { width: 60px; height: 60px; left: 20%; animation-duration: 15s; animation-delay: 2s; }
+    .bubble:nth-child(3) { width: 30px; height: 30px; left: 30%; animation-duration: 10s; animation-delay: 4s; }
+    .bubble:nth-child(4) { width: 50px; height: 50px; left: 40%; animation-duration: 13s; animation-delay: 1s; }
+    .bubble:nth-child(5) { width: 70px; height: 70px; left: 50%; animation-duration: 11s; animation-delay: 3s; }
+    .bubble:nth-child(6) { width: 45px; height: 45px; left: 60%; animation-duration: 14s; animation-delay: 5s; }
+    .bubble:nth-child(7) { width: 55px; height: 55px; left: 70%; animation-duration: 12s; animation-delay: 2.5s; }
+    .bubble:nth-child(8) { width: 35px; height: 35px; left: 80%; animation-duration: 16s; animation-delay: 1.5s; }
+    .bubble:nth-child(9) { width: 65px; height: 65px; left: 90%; animation-duration: 11s; animation-delay: 3.5s; }
   </style>
 </head>
 <body class="min-h-screen relative overflow-hidden bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243e] text-white font-nunito flex flex-col items-center justify-center p-6">
@@ -74,6 +98,16 @@
   <!-- Background Animation -->
   <div class="absolute inset-0 z-0">
     <div class="w-screen h-screen bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.05),transparent_70%)] animate-pulse-slow"></div>
+    <!-- Bubbles -->
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
   </div>
 
   <!-- Titles -->
@@ -84,32 +118,31 @@
 
   <!-- Cards Grid -->
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-3xl z-10">
-    <a href="https://sithcreation.framer.website/?editSite" class="card bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-6 flex items-center space-x-4 hover:shadow-xl transition-transform duration-300 shadow-md hover:shadow-purple-500/30 transform-gpu hover:scale-105 hover:-translate-y-1">
+    <a href="https://sithcreation.framer.website/?editSite" class="card bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-6 flex items-center space-x-4 hover:shadow-xl transition-transform duration-300 shadow-sm hover:shadow-purple-500/30 transform-gpu hover:scale-105 hover:-translate-y-1">
       <span class="text-3xl icon-float">🎨</span>
       <div>
         <h3 class="text-lg font-semibold">UI/UX Portfolio</h3>
-        <p class="text-sm text-white/70">See my design projects &amp; case studies</p>
-
+        <p class="text-sm text-white/70">See my design projects & case studies</p>
       </div>
     </a>
 
-    <a href="https://www.tiktok.com/@sithcreation?_t=ZS-8yCnoalKOv9&_r=1" class="card bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-6 flex items-center space-x-4 hover:shadow-xl transition-transform duration-300 shadow-md hover:shadow-purple-500/30 transform-gpu hover:scale-105 hover:-translate-y-1">
+    <a href="https://www.tiktok.com/@sithcreation?_t=ZS-8yCnoalKOv9&_r=1" class="card bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-6 flex items-center space-x-4 hover:shadow-xl transition-transform duration-300 shadow-sm hover:shadow-purple-500/30 transform-gpu hover:scale-105 hover:-translate-y-1">
       <span class="text-3xl icon-float">🎥</span>
       <div>
         <h3 class="text-lg font-semibold">AI Videos</h3>
-        <p class="text-sm text-white/70">Generated cinematic content with Sora, Veo &amp; Runway</p>
+        <p class="text-sm text-white/70">Generated cinematic content with Sora, Veo & Runway</p>
       </div>
     </a>
 
-    <a href="https://stock.adobe.com/lk/contributor/211425911/SithCreations" class="card bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-6 flex items-center space-x-4 hover:shadow-xl transition-transform duration-300 shadow-md hover:shadow-purple-500/30 transform-gpu hover:scale-105 hover:-translate-y-1">
+    <a href="https://stock.adobe.com/lk/contributor/211425911/SithCreations" class="card bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-6 flex items-center space-x-4 hover:shadow-xl transition-transform duration-300 shadow-sm hover:shadow-purple-500/30 transform-gpu hover:scale-105 hover:-translate-y-1">
       <span class="text-3xl icon-float">🌞</span>
       <div>
         <h3 class="text-lg font-semibold">AI Images</h3>
-        <p class="text-sm text-white/70">Explore AI-generated artwork using Midjourney &amp; DALL·E</p>
+        <p class="text-sm text-white/70">Explore AI-generated artwork using Midjourney & DALL·E</p>
       </div>
     </a>
 
-    <a href="https://www.flickr.com/photos/196022082@N04/" class="card bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-6 flex items-center space-x-4 hover:shadow-xl transition-transform duration-300 shadow-md hover:shadow-purple-500/30 transform-gpu hover:scale-105 hover:-translate-y-1">
+    <a href="https://www.flickr.com/photos/196022082@N04/" class="card bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-6 flex items-center space-x-4 hover:shadow-xl transition-transform duration-300 shadow-sm hover:shadow-purple-500/30 transform-gpu hover:scale-105 hover:-translate-y-1">
       <span class="text-3xl icon-float">✏️</span>
       <div>
         <h3 class="text-lg font-semibold">Illustrations</h3>
